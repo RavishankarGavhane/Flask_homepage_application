@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome !!!</title>
+</head>
+<body>
+
+<h1> Well come to my homepage application </h1>
+<p>
+this application is being built fo demo purpose
+     {% for card in cards %}
+        <br>
+        <br>
+        index - {{ loop.index0 }} -
+        <a href="{{ url_for("card_view", index=loop.index0) }}">
+        {{ card.question }}
+        </a>
+    {% endfor %}
+</p>
+<img src="static/flasklogo.png">
+</body>
+</html>
